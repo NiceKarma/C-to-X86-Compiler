@@ -3,39 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct {
-        int type;
-        char *value;
-        struct ASTNode *children;
-} ASTNode;
-
-void addASTNode(ASTNode *parent) {
-        ASTNode child;
-        parent->children
-}
-
-int returnExp() {}
-
-int parseStatement(Token *input_token) {
-        Token *current_token = input_token;
-        current_token++;
-
-        if (current_token->type != KEY_RETURN) {
-                return -1;
-        }
-
-        current_token++;
-        if (current_token->type != INTEGER_LITERAL) {
-                return -1;
-        }
-
-        current_token++;
-}
-
-int parseExpression() {}
-
-void parse(Token *token_list) {}
-
 int main(int argc, char *argv[]) {
 
         if (argc != 2) {
@@ -68,5 +35,8 @@ int main(int argc, char *argv[]) {
                 }
         }
         fclose(file_to_lex);
+
+        Program tree = parseProgram(&token_list);
+
         return 0;
 }

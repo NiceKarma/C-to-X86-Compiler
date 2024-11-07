@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+void *safeMalloc(int);
+
+void *safeRealloc(void *, int);
+
+int isKeyword(char *);
+
 void *safeMalloc(int size) {
         void *tmp_ptr;
         tmp_ptr = malloc(size);
