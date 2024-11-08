@@ -1,13 +1,36 @@
 #include "compiler.h"
+#include "token_types.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// int generateExpression(Expression expr, FILE *dest) { return 0; }
+int generateExpression(Expression expr, FILE *dest) {
+        switch (expr.type) {
+        case MINUS:
+                generateExpression(*expr.expression, dest);
+                fprintf(dest, "\tneg %%eax\n");
+                break;
+        case TILDE:
+                generateExpression(*expr.expression, dest);
+                fprintf(dest, "\tnot %%eax\n");
+                break;
+        case EXCLAMATION:
+                generateExpression(*expr.expression, dest);
+                fprintf(dest, "\tcmpl $0, %%eax\n");
+                fprintf(dest, "\tmov $0, %%eax\n");
+                fprintf(dest, "\tsete %%al\n");
+                break;
+        case INTEGER_LITERAL:
+                fprintf(dest, "\tmovl $%d, %%eax\n", expr.value);
+                break;
+        }
+
+        return 0;
+}
 
 int generateReturn(Statement statement, FILE *dest) {
 
-        fprintf(dest, "\tmovl    $%d, %%eax\n", statement.expression.value);
+        generateExpression(*statement.expression, dest);
         fprintf(dest, "\tret\n");
 
         return 0;
@@ -18,17 +41,19 @@ int generateFunc(Function func, FILE *dest) {
         fprintf(dest, "\t.global %s\n", func.name);
         fprintf(dest, "%s:\n", func.name);
 
-        generateReturn(func.statement, dest);
+        generateReturn(*func.statement, dest);
 
         return 0;
 }
 
 int generateCode(Program program, FILE *dest) {
 
-        generateFunc(program.func, dest);
+        generateFunc(*program.func, dest);
 
         return 0;
 }
+
+Program tree;
 
 int main(int argc, char *argv[]) {
 
@@ -63,7 +88,7 @@ int main(int argc, char *argv[]) {
         }
         fclose(file_to_lex);
 
-        Program tree = parseProgram(&token_list);
+        tree = parseProgram(&token_list);
 
         FILE *output_asm;
         output_asm = fopen("output.s", "w");

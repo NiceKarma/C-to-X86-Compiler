@@ -257,6 +257,12 @@ Token *lex(FILE *file_to_lex) {
                 case '/':
                         token_list[list_len - 1].type = DIVIDE;
                         break;
+                case '~':
+                        token_list[list_len - 1].type = TILDE;
+                        break;
+                case '!':
+                        token_list[list_len - 1].type = EXCLAMATION;
+                        break;
                 case '%':
                         token_list[list_len - 1].type = MODULO;
                         break;

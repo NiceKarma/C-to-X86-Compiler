@@ -10,13 +10,23 @@ void syntaxError() {
 
 Expression parseExpression(Token **input_token) {
         Token *curr_token = *input_token;
+        Expression expr;
 
-        if (curr_token->type != INTEGER_LITERAL) {
+        if (curr_token->type == INTEGER_LITERAL) {
+
+                expr = newConstant(atoi(curr_token->value));
+
+        } else if (curr_token->type == MINUS || curr_token->type == TILDE ||
+                   curr_token->type == EXCLAMATION) {
+
+                Token *orig_token = curr_token;
+                curr_token++;
+                Expression inner_expr = parseExpression(&curr_token);
+                expr = newUnOp(orig_token->type, &inner_expr);
+
+        } else {
                 syntaxError();
         }
-
-        Expression expr;
-        expr.value = atoi(curr_token->value);
 
         *input_token = curr_token;
         return expr;
@@ -25,18 +35,13 @@ Expression parseExpression(Token **input_token) {
 Statement parseStatement(Token **input_token) {
         Token *curr_token = *input_token;
 
-        curr_token++;
         if (curr_token->type != KEY_RETURN) {
                 syntaxError();
         }
 
         curr_token++;
-        if (curr_token->type != INTEGER_LITERAL) {
-                syntaxError();
-        }
-
         Expression expr = parseExpression(&curr_token);
-        Statement statement = newReturn(expr);
+        Statement statement = newReturn(&expr);
 
         curr_token++;
         if (curr_token->type != SEMICOLON) {
@@ -49,7 +54,6 @@ Statement parseStatement(Token **input_token) {
 
 Function parseFunction(Token **input_token) {
         Token *curr_token = *input_token;
-        curr_token++;
         if (curr_token->type != KEY_INT) {
                 syntaxError();
         }
@@ -75,8 +79,9 @@ Function parseFunction(Token **input_token) {
                 syntaxError();
         }
 
+        curr_token++;
         Statement statement = parseStatement(&curr_token);
-        Function func = newFunction(func_name, statement);
+        Function func = newFunction(func_name, &statement);
 
         curr_token++;
         if (curr_token->type != CLOSE_CURLY) {
@@ -92,8 +97,9 @@ Program parseProgram(Token **input_token) {
         if (curr_token->type != START_OF_LIST) {
                 syntaxError();
         }
+        curr_token++;
         Function func = parseFunction(&curr_token);
-        Program prog = newProgram(func);
+        Program prog = newProgram(&func);
 
         *input_token = curr_token;
         return prog;

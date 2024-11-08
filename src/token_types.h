@@ -53,6 +53,8 @@ enum TokenTypes {
         STAR,
         DIVIDE,
         MODULO,
+        TILDE,
+        EXCLAMATION,
         INTEGER_LITERAL,
         FLOAT_LITEREAL,
         CHARACTER_LITERAL,

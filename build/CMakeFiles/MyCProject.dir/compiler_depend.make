@@ -4,6 +4,7 @@
 CMakeFiles/MyCProject.dir/src/ast_tree.c.o: ../src/ast_tree.c \
   /usr/include/stdc-predef.h \
   ../src/ast_tree.h \
+  ../src/token_types.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
@@ -244,8 +245,6 @@ CMakeFiles/MyCProject.dir/src/parser.c.o: ../src/parser.c \
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-../src/compiler.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
@@ -290,11 +289,17 @@ CMakeFiles/MyCProject.dir/src/parser.c.o: ../src/parser.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 ../src/ast_tree.c:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/features.h:
 
@@ -308,15 +313,11 @@ CMakeFiles/MyCProject.dir/src/parser.c.o: ../src/parser.c \
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/include/string.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+../src/compiler.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 

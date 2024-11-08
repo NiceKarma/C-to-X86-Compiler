@@ -2,6 +2,7 @@ CMakeFiles/MyCProject.dir/src/ast_tree.c.o: \
  /home/paul/Projects/c_to_x86_compiler/src/ast_tree.c \
  /usr/include/stdc-predef.h \
  /home/paul/Projects/c_to_x86_compiler/src/ast_tree.h \
+ /home/paul/Projects/c_to_x86_compiler/src/token_types.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

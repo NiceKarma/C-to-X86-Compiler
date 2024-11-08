@@ -2,28 +2,32 @@
 #define AST_TREE_DOT_H
 
 typedef struct Expression {
+        int type;
         int value;
+        struct Expression *expression;
 } Expression;
 
 typedef struct Statement {
-        Expression expression;
+        Expression *expression;
 } Statement;
 
 typedef struct Function {
         char *name;
-        Statement statement;
+        Statement *statement;
 } Function;
 
 typedef struct Program {
-        Function func;
+        Function *func;
 } Program;
 
-Expression newExpression(int);
+Expression newUnOp(int, Expression *);
 
-Statement newReturn(Expression);
+Expression newConstant(int);
 
-Function newFunction(char *, Statement);
+Statement newReturn(Expression *);
 
-Program newProgram(Function);
+Function newFunction(char *, Statement *);
+
+Program newProgram(Function *);
 
 #endif
