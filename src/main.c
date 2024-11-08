@@ -3,6 +3,33 @@
 #include <stdlib.h>
 #include <string.h>
 
+// int generateExpression(Expression expr, FILE *dest) { return 0; }
+
+int generateReturn(Statement statement, FILE *dest) {
+
+        fprintf(dest, "\tmovl    $%d, %%eax\n", statement.expression.value);
+        fprintf(dest, "\tret\n");
+
+        return 0;
+}
+
+int generateFunc(Function func, FILE *dest) {
+
+        fprintf(dest, "\t.global %s\n", func.name);
+        fprintf(dest, "%s:\n", func.name);
+
+        generateReturn(func.statement, dest);
+
+        return 0;
+}
+
+int generateCode(Program program, FILE *dest) {
+
+        generateFunc(program.func, dest);
+
+        return 0;
+}
+
 int main(int argc, char *argv[]) {
 
         if (argc != 2) {
@@ -37,6 +64,15 @@ int main(int argc, char *argv[]) {
         fclose(file_to_lex);
 
         Program tree = parseProgram(&token_list);
+
+        FILE *output_asm;
+        output_asm = fopen("output.s", "w");
+        if (output_asm == NULL) {
+                printf("File failed to open!");
+                exit(0);
+        }
+
+        generateCode(tree, output_asm);
 
         return 0;
 }
