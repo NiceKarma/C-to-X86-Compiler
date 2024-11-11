@@ -6,16 +6,21 @@ char *typeString(int);
 
 void printTabs(int num_tabs) {
         for (int i = 0; i < num_tabs; i++) {
-                printf("\t");
+                printf("|   ");
         }
 }
 
 void printFactor(Node *factor, int curr_lvl) {
         printTabs(curr_lvl);
         printf("%s\n", typeString(((Literal *)factor->data)->ltype));
-        if (factor->child != NULL) {
-                printFactor(factor->child, curr_lvl + 1);
+        if (factor->child == NULL) {
+                return;
         }
+        printFactor(factor->child, curr_lvl + 1);
+        if (factor->child->sibling == NULL) {
+                return;
+        }
+        printFactor(factor->child->sibling, curr_lvl + 1);
 }
 
 void printStatement(Node *statement, int curr_lvl) {

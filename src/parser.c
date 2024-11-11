@@ -19,6 +19,7 @@ Node *parseFactor(Token **input_token) {
                 curr_token++;
                 factor = parseExpression(&curr_token);
 
+                curr_token++;
                 if (curr_token->type != CLOSE_PARENTHESIS) {
                         syntaxError();
                 }
