@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/MyCProject.dir/src/ast_tree.c.o CMakeFiles/MyCProject.dir/src/lexer.c.o CMakeFiles/MyCProject.dir/src/main.c.o CMakeFiles/MyCProject.dir/src/parser.c.o -o MyCProject 
+/usr/bin/cc -g CMakeFiles/MyCProject.dir/src/asm_gen.c.o CMakeFiles/MyCProject.dir/src/ast_tree.c.o CMakeFiles/MyCProject.dir/src/lexer.c.o CMakeFiles/MyCProject.dir/src/main.c.o CMakeFiles/MyCProject.dir/src/parser.c.o CMakeFiles/MyCProject.dir/src/print_ast.c.o -o MyCProject 

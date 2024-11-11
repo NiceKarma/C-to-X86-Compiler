@@ -56,7 +56,7 @@ enum TokenTypes {
         TILDE,
         EXCLAMATION,
         INTEGER_LITERAL,
-        FLOAT_LITEREAL,
+        FLOAT_LITERAL,
         CHARACTER_LITERAL,
         STRING_LITERAL,
         COMMENT,

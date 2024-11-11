@@ -7,6 +7,10 @@
 
 Token *lex(FILE *);
 
-Program parseProgram(Token **);
+Node *parseProgram(Token **);
+
+int generateCode(Node *, FILE *);
+
+void printAST(Node *);
 
 #endif

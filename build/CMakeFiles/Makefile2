@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/paul/Projects/c_to_x86_compiler/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MyCProject.dir/all
+all: CMakeFiles/compile.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MyCProject.dir/clean
+clean: CMakeFiles/compile.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MyCProject.dir
+# Target rules for target CMakeFiles/compile.dir
 
 # All Build rule for target.
-CMakeFiles/MyCProject.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target MyCProject"
-.PHONY : CMakeFiles/MyCProject.dir/all
+CMakeFiles/compile.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target compile"
+.PHONY : CMakeFiles/compile.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MyCProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/Projects/c_to_x86_compiler/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MyCProject.dir/all
+CMakeFiles/compile.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/Projects/c_to_x86_compiler/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/compile.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/Projects/c_to_x86_compiler/build/CMakeFiles 0
-.PHONY : CMakeFiles/MyCProject.dir/rule
+.PHONY : CMakeFiles/compile.dir/rule
 
 # Convenience name for target.
-MyCProject: CMakeFiles/MyCProject.dir/rule
-.PHONY : MyCProject
+compile: CMakeFiles/compile.dir/rule
+.PHONY : compile
 
 # clean rule for target.
-CMakeFiles/MyCProject.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/clean
-.PHONY : CMakeFiles/MyCProject.dir/clean
+CMakeFiles/compile.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/clean
+.PHONY : CMakeFiles/compile.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

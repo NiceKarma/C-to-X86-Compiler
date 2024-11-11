@@ -117,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MyCProject
+# Target rules for targets named compile
 
 # Build rule for target.
-MyCProject: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyCProject
-.PHONY : MyCProject
+compile: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 compile
+.PHONY : compile
 
 # fast build rule for target.
-MyCProject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/build
-.PHONY : MyCProject/fast
+compile/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/build
+.PHONY : compile/fast
+
+src/asm_gen.o: src/asm_gen.c.o
+.PHONY : src/asm_gen.o
+
+# target to build an object file
+src/asm_gen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/asm_gen.c.o
+.PHONY : src/asm_gen.c.o
+
+src/asm_gen.i: src/asm_gen.c.i
+.PHONY : src/asm_gen.i
+
+# target to preprocess a source file
+src/asm_gen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/asm_gen.c.i
+.PHONY : src/asm_gen.c.i
+
+src/asm_gen.s: src/asm_gen.c.s
+.PHONY : src/asm_gen.s
+
+# target to generate assembly for a file
+src/asm_gen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/asm_gen.c.s
+.PHONY : src/asm_gen.c.s
 
 src/ast_tree.o: src/ast_tree.c.o
 .PHONY : src/ast_tree.o
 
 # target to build an object file
 src/ast_tree.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/ast_tree.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/ast_tree.c.o
 .PHONY : src/ast_tree.c.o
 
 src/ast_tree.i: src/ast_tree.c.i
@@ -142,7 +166,7 @@ src/ast_tree.i: src/ast_tree.c.i
 
 # target to preprocess a source file
 src/ast_tree.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/ast_tree.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/ast_tree.c.i
 .PHONY : src/ast_tree.c.i
 
 src/ast_tree.s: src/ast_tree.c.s
@@ -150,7 +174,7 @@ src/ast_tree.s: src/ast_tree.c.s
 
 # target to generate assembly for a file
 src/ast_tree.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/ast_tree.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/ast_tree.c.s
 .PHONY : src/ast_tree.c.s
 
 src/lexer.o: src/lexer.c.o
@@ -158,7 +182,7 @@ src/lexer.o: src/lexer.c.o
 
 # target to build an object file
 src/lexer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/lexer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/lexer.c.o
 .PHONY : src/lexer.c.o
 
 src/lexer.i: src/lexer.c.i
@@ -166,7 +190,7 @@ src/lexer.i: src/lexer.c.i
 
 # target to preprocess a source file
 src/lexer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/lexer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/lexer.c.i
 .PHONY : src/lexer.c.i
 
 src/lexer.s: src/lexer.c.s
@@ -174,7 +198,7 @@ src/lexer.s: src/lexer.c.s
 
 # target to generate assembly for a file
 src/lexer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/lexer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/lexer.c.s
 .PHONY : src/lexer.c.s
 
 src/main.o: src/main.c.o
@@ -182,7 +206,7 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -190,7 +214,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -198,7 +222,7 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/main.c.s
 .PHONY : src/main.c.s
 
 src/parser.o: src/parser.c.o
@@ -206,7 +230,7 @@ src/parser.o: src/parser.c.o
 
 # target to build an object file
 src/parser.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/parser.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/parser.c.o
 .PHONY : src/parser.c.o
 
 src/parser.i: src/parser.c.i
@@ -214,7 +238,7 @@ src/parser.i: src/parser.c.i
 
 # target to preprocess a source file
 src/parser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/parser.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/parser.c.i
 .PHONY : src/parser.c.i
 
 src/parser.s: src/parser.c.s
@@ -222,8 +246,32 @@ src/parser.s: src/parser.c.s
 
 # target to generate assembly for a file
 src/parser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyCProject.dir/build.make CMakeFiles/MyCProject.dir/src/parser.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/parser.c.s
 .PHONY : src/parser.c.s
+
+src/print_ast.o: src/print_ast.c.o
+.PHONY : src/print_ast.o
+
+# target to build an object file
+src/print_ast.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/print_ast.c.o
+.PHONY : src/print_ast.c.o
+
+src/print_ast.i: src/print_ast.c.i
+.PHONY : src/print_ast.i
+
+# target to preprocess a source file
+src/print_ast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/print_ast.c.i
+.PHONY : src/print_ast.c.i
+
+src/print_ast.s: src/print_ast.c.s
+.PHONY : src/print_ast.s
+
+# target to generate assembly for a file
+src/print_ast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/print_ast.c.s
+.PHONY : src/print_ast.c.s
 
 # Help Target
 help:
@@ -233,7 +281,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MyCProject"
+	@echo "... compile"
+	@echo "... src/asm_gen.o"
+	@echo "... src/asm_gen.i"
+	@echo "... src/asm_gen.s"
 	@echo "... src/ast_tree.o"
 	@echo "... src/ast_tree.i"
 	@echo "... src/ast_tree.s"
@@ -246,6 +297,9 @@ help:
 	@echo "... src/parser.o"
 	@echo "... src/parser.i"
 	@echo "... src/parser.s"
+	@echo "... src/print_ast.o"
+	@echo "... src/print_ast.i"
+	@echo "... src/print_ast.s"
 .PHONY : help
 
 

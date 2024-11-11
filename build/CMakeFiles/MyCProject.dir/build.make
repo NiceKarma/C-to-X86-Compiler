@@ -69,10 +69,24 @@ include CMakeFiles/MyCProject.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MyCProject.dir/flags.make
 
+CMakeFiles/MyCProject.dir/src/asm_gen.c.o: CMakeFiles/MyCProject.dir/flags.make
+CMakeFiles/MyCProject.dir/src/asm_gen.c.o: ../src/asm_gen.c
+CMakeFiles/MyCProject.dir/src/asm_gen.c.o: CMakeFiles/MyCProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MyCProject.dir/src/asm_gen.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyCProject.dir/src/asm_gen.c.o -MF CMakeFiles/MyCProject.dir/src/asm_gen.c.o.d -o CMakeFiles/MyCProject.dir/src/asm_gen.c.o -c /home/paul/Projects/c_to_x86_compiler/src/asm_gen.c
+
+CMakeFiles/MyCProject.dir/src/asm_gen.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyCProject.dir/src/asm_gen.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/paul/Projects/c_to_x86_compiler/src/asm_gen.c > CMakeFiles/MyCProject.dir/src/asm_gen.c.i
+
+CMakeFiles/MyCProject.dir/src/asm_gen.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyCProject.dir/src/asm_gen.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paul/Projects/c_to_x86_compiler/src/asm_gen.c -o CMakeFiles/MyCProject.dir/src/asm_gen.c.s
+
 CMakeFiles/MyCProject.dir/src/ast_tree.c.o: CMakeFiles/MyCProject.dir/flags.make
 CMakeFiles/MyCProject.dir/src/ast_tree.c.o: ../src/ast_tree.c
 CMakeFiles/MyCProject.dir/src/ast_tree.c.o: CMakeFiles/MyCProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MyCProject.dir/src/ast_tree.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyCProject.dir/src/ast_tree.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyCProject.dir/src/ast_tree.c.o -MF CMakeFiles/MyCProject.dir/src/ast_tree.c.o.d -o CMakeFiles/MyCProject.dir/src/ast_tree.c.o -c /home/paul/Projects/c_to_x86_compiler/src/ast_tree.c
 
 CMakeFiles/MyCProject.dir/src/ast_tree.c.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/MyCProject.dir/src/ast_tree.c.s: cmake_force
 CMakeFiles/MyCProject.dir/src/lexer.c.o: CMakeFiles/MyCProject.dir/flags.make
 CMakeFiles/MyCProject.dir/src/lexer.c.o: ../src/lexer.c
 CMakeFiles/MyCProject.dir/src/lexer.c.o: CMakeFiles/MyCProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyCProject.dir/src/lexer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MyCProject.dir/src/lexer.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyCProject.dir/src/lexer.c.o -MF CMakeFiles/MyCProject.dir/src/lexer.c.o.d -o CMakeFiles/MyCProject.dir/src/lexer.c.o -c /home/paul/Projects/c_to_x86_compiler/src/lexer.c
 
 CMakeFiles/MyCProject.dir/src/lexer.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/MyCProject.dir/src/lexer.c.s: cmake_force
 CMakeFiles/MyCProject.dir/src/main.c.o: CMakeFiles/MyCProject.dir/flags.make
 CMakeFiles/MyCProject.dir/src/main.c.o: ../src/main.c
 CMakeFiles/MyCProject.dir/src/main.c.o: CMakeFiles/MyCProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MyCProject.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/MyCProject.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyCProject.dir/src/main.c.o -MF CMakeFiles/MyCProject.dir/src/main.c.o.d -o CMakeFiles/MyCProject.dir/src/main.c.o -c /home/paul/Projects/c_to_x86_compiler/src/main.c
 
 CMakeFiles/MyCProject.dir/src/main.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/MyCProject.dir/src/main.c.s: cmake_force
 CMakeFiles/MyCProject.dir/src/parser.c.o: CMakeFiles/MyCProject.dir/flags.make
 CMakeFiles/MyCProject.dir/src/parser.c.o: ../src/parser.c
 CMakeFiles/MyCProject.dir/src/parser.c.o: CMakeFiles/MyCProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/MyCProject.dir/src/parser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/MyCProject.dir/src/parser.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyCProject.dir/src/parser.c.o -MF CMakeFiles/MyCProject.dir/src/parser.c.o.d -o CMakeFiles/MyCProject.dir/src/parser.c.o -c /home/paul/Projects/c_to_x86_compiler/src/parser.c
 
 CMakeFiles/MyCProject.dir/src/parser.c.i: cmake_force
@@ -125,23 +139,41 @@ CMakeFiles/MyCProject.dir/src/parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyCProject.dir/src/parser.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paul/Projects/c_to_x86_compiler/src/parser.c -o CMakeFiles/MyCProject.dir/src/parser.c.s
 
+CMakeFiles/MyCProject.dir/src/print_ast.c.o: CMakeFiles/MyCProject.dir/flags.make
+CMakeFiles/MyCProject.dir/src/print_ast.c.o: ../src/print_ast.c
+CMakeFiles/MyCProject.dir/src/print_ast.c.o: CMakeFiles/MyCProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/MyCProject.dir/src/print_ast.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyCProject.dir/src/print_ast.c.o -MF CMakeFiles/MyCProject.dir/src/print_ast.c.o.d -o CMakeFiles/MyCProject.dir/src/print_ast.c.o -c /home/paul/Projects/c_to_x86_compiler/src/print_ast.c
+
+CMakeFiles/MyCProject.dir/src/print_ast.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyCProject.dir/src/print_ast.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/paul/Projects/c_to_x86_compiler/src/print_ast.c > CMakeFiles/MyCProject.dir/src/print_ast.c.i
+
+CMakeFiles/MyCProject.dir/src/print_ast.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyCProject.dir/src/print_ast.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paul/Projects/c_to_x86_compiler/src/print_ast.c -o CMakeFiles/MyCProject.dir/src/print_ast.c.s
+
 # Object files for target MyCProject
 MyCProject_OBJECTS = \
+"CMakeFiles/MyCProject.dir/src/asm_gen.c.o" \
 "CMakeFiles/MyCProject.dir/src/ast_tree.c.o" \
 "CMakeFiles/MyCProject.dir/src/lexer.c.o" \
 "CMakeFiles/MyCProject.dir/src/main.c.o" \
-"CMakeFiles/MyCProject.dir/src/parser.c.o"
+"CMakeFiles/MyCProject.dir/src/parser.c.o" \
+"CMakeFiles/MyCProject.dir/src/print_ast.c.o"
 
 # External object files for target MyCProject
 MyCProject_EXTERNAL_OBJECTS =
 
+MyCProject: CMakeFiles/MyCProject.dir/src/asm_gen.c.o
 MyCProject: CMakeFiles/MyCProject.dir/src/ast_tree.c.o
 MyCProject: CMakeFiles/MyCProject.dir/src/lexer.c.o
 MyCProject: CMakeFiles/MyCProject.dir/src/main.c.o
 MyCProject: CMakeFiles/MyCProject.dir/src/parser.c.o
+MyCProject: CMakeFiles/MyCProject.dir/src/print_ast.c.o
 MyCProject: CMakeFiles/MyCProject.dir/build.make
 MyCProject: CMakeFiles/MyCProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable MyCProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/paul/Projects/c_to_x86_compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable MyCProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyCProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

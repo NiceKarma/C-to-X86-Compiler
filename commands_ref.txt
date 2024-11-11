@@ -1,0 +1,3 @@
+To see how many lines of code you have in your src directory:
+git ls-files src/ | xargs wc -l
+

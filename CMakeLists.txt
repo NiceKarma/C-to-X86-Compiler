@@ -16,18 +16,18 @@ file(GLOB SOURCES "src/*.c")
 
 
 #Create the executable
-add_executable(MyCProject ${SOURCES})
+add_executable(compile ${SOURCES})
 
 
 #Compile Flags
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-        target_compile_options(MyCProject PRIVATE
+        target_compile_options(compile PRIVATE
                 -g
                 -Wall
                 -Wextra
         )
 elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-        target_compile_options(MyCProject PRIVATE
+        target_compile_options(compile PRIVATE
                 -O2
         )
 endif()

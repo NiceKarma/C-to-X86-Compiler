@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MyCProject.dir/src/asm_gen.c.o"
+  "CMakeFiles/MyCProject.dir/src/asm_gen.c.o.d"
   "CMakeFiles/MyCProject.dir/src/ast_tree.c.o"
   "CMakeFiles/MyCProject.dir/src/ast_tree.c.o.d"
   "CMakeFiles/MyCProject.dir/src/lexer.c.o"
@@ -7,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyCProject.dir/src/main.c.o.d"
   "CMakeFiles/MyCProject.dir/src/parser.c.o"
   "CMakeFiles/MyCProject.dir/src/parser.c.o.d"
+  "CMakeFiles/MyCProject.dir/src/print_ast.c.o"
+  "CMakeFiles/MyCProject.dir/src/print_ast.c.o.d"
   "MyCProject"
   "MyCProject.pdb"
 )
