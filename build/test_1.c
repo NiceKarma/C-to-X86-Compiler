@@ -1,1 +1,1 @@
-int main() { return 3 * 3 + (-1); }
+int main() { return 1 + 22 / (6 + 1); }

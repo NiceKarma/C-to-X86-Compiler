@@ -205,7 +205,7 @@ Token *lex(FILE *file_to_lex) {
                                     safeRealloc(token_list[list_len - 1].value,
                                                 num_len * sizeof(char));
                                 ((token_list + list_len - 1)
-                                     ->value)[num_len - 1] = current_char;
+                                     ->value)[num_len - 2] = current_char;
                                 if (num_len == 64) {
                                         printf("Number too long!\n");
                                         abort();

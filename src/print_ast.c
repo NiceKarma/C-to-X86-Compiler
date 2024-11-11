@@ -13,6 +13,10 @@ void printTabs(int num_tabs) {
 void printFactor(Node *factor, int curr_lvl) {
         printTabs(curr_lvl);
         printf("%s\n", typeString(((Literal *)factor->data)->ltype));
+        if (((Literal *)factor->data)->ltype == INTEGER_LITERAL) {
+                printTabs(curr_lvl);
+                printf("  = %s\n", ((Literal *)factor->data)->value);
+        }
         if (factor->child == NULL) {
                 return;
         }

@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
                 exit(0);
         }
 
-        // generateCode(tree, output_asm);
+        generateCode(tree, output_asm);
 
         fclose(output_asm);
 
