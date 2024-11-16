@@ -13,4 +13,6 @@ int generateCode(Node *, FILE *);
 
 void printAST(Node *);
 
+void printTokenList(Token **);
+
 #endif

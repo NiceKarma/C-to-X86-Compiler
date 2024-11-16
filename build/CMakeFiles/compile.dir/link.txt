@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/compile.dir/src/asm_gen.c.o CMakeFiles/compile.dir/src/ast_tree.c.o CMakeFiles/compile.dir/src/lexer.c.o CMakeFiles/compile.dir/src/main.c.o CMakeFiles/compile.dir/src/parser.c.o CMakeFiles/compile.dir/src/print_ast.c.o -o compile 
+/usr/bin/cc -g CMakeFiles/compile.dir/src/asm_gen.c.o CMakeFiles/compile.dir/src/ast_tree.c.o CMakeFiles/compile.dir/src/lexer.c.o CMakeFiles/compile.dir/src/main.c.o CMakeFiles/compile.dir/src/parser.c.o CMakeFiles/compile.dir/src/print_ast.c.o CMakeFiles/compile.dir/src/print_token_list.c.o -o compile 

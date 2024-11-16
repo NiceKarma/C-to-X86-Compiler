@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/paul/Projects/c_to_x86_compiler/src/main.c" "CMakeFiles/compile.dir/src/main.c.o" "gcc" "CMakeFiles/compile.dir/src/main.c.o.d"
   "/home/paul/Projects/c_to_x86_compiler/src/parser.c" "CMakeFiles/compile.dir/src/parser.c.o" "gcc" "CMakeFiles/compile.dir/src/parser.c.o.d"
   "/home/paul/Projects/c_to_x86_compiler/src/print_ast.c" "CMakeFiles/compile.dir/src/print_ast.c.o" "gcc" "CMakeFiles/compile.dir/src/print_ast.c.o.d"
+  "/home/paul/Projects/c_to_x86_compiler/src/print_token_list.c" "CMakeFiles/compile.dir/src/print_token_list.c.o" "gcc" "CMakeFiles/compile.dir/src/print_token_list.c.o.d"
   )
 
 # Targets to which this target links.

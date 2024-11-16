@@ -47,7 +47,9 @@ enum TokenTypes {
         OPEN_BRACKET,
         CLOSE_BRACKET,
         SEMICOLON,
+
         EQUALS,
+
         PLUS,
         MINUS,
         STAR,
@@ -55,12 +57,23 @@ enum TokenTypes {
         MODULO,
         TILDE,
         EXCLAMATION,
+
+        IS_EQUAL,
+        IS_NOT_EQUAL,
+        L_THAN,
+        LE_THAN,
+        G_THAN,
+        GE_THAN,
+
+        LOGICAL_AND,
+        LOGICAL_OR,
+        BITWISE_AND,
+        BITWISE_OR,
+
         INTEGER_LITERAL,
         FLOAT_LITERAL,
         CHARACTER_LITERAL,
         STRING_LITERAL,
-        COMMENT,
-        WHITESPACE,
         END_OF_LIST
 };
 

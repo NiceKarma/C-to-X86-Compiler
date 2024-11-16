@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/compile.dir/src/parser.c.o.d"
   "CMakeFiles/compile.dir/src/print_ast.c.o"
   "CMakeFiles/compile.dir/src/print_ast.c.o.d"
+  "CMakeFiles/compile.dir/src/print_token_list.c.o"
+  "CMakeFiles/compile.dir/src/print_token_list.c.o.d"
   "compile"
   "compile.pdb"
 )

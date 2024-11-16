@@ -273,6 +273,30 @@ src/print_ast.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/print_ast.c.s
 .PHONY : src/print_ast.c.s
 
+src/print_token_list.o: src/print_token_list.c.o
+.PHONY : src/print_token_list.o
+
+# target to build an object file
+src/print_token_list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/print_token_list.c.o
+.PHONY : src/print_token_list.c.o
+
+src/print_token_list.i: src/print_token_list.c.i
+.PHONY : src/print_token_list.i
+
+# target to preprocess a source file
+src/print_token_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/print_token_list.c.i
+.PHONY : src/print_token_list.c.i
+
+src/print_token_list.s: src/print_token_list.c.s
+.PHONY : src/print_token_list.s
+
+# target to generate assembly for a file
+src/print_token_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/compile.dir/build.make CMakeFiles/compile.dir/src/print_token_list.c.s
+.PHONY : src/print_token_list.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -300,6 +324,9 @@ help:
 	@echo "... src/print_ast.o"
 	@echo "... src/print_ast.i"
 	@echo "... src/print_ast.s"
+	@echo "... src/print_token_list.o"
+	@echo "... src/print_token_list.i"
+	@echo "... src/print_token_list.s"
 .PHONY : help
 
 

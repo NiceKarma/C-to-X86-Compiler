@@ -1,8 +1,7 @@
+#include "print_ast.h"
 #include "ast_tree.h"
 #include "token_types.h"
 #include <stdio.h>
-
-char *typeString(int);
 
 void printTabs(int num_tabs) {
         for (int i = 0; i < num_tabs; i++) {
@@ -57,6 +56,8 @@ void printAST(Node *program) {
 
 char *typeString(int type) {
         switch (type) {
+        case (START_OF_LIST):
+                return "START_OF_LIST";
 
         case (IDENTIFIER):
                 return "Identifier";
@@ -140,8 +141,10 @@ char *typeString(int type) {
                 return "CLOSE_BRACKET";
         case (SEMICOLON):
                 return "SEMICOLON";
+
         case (EQUALS):
                 return "EQUALS";
+
         case (PLUS):
                 return "PLUS";
         case (MINUS):
@@ -156,6 +159,29 @@ char *typeString(int type) {
                 return "TILDE";
         case (EXCLAMATION):
                 return "EXCLAMATION";
+
+        case (IS_EQUAL):
+                return "IS_EQUAL";
+        case (IS_NOT_EQUAL):
+                return "IS_NOT_EQUAL";
+        case (L_THAN):
+                return "L_THAN";
+        case (LE_THAN):
+                return "LE_THAN";
+        case (G_THAN):
+                return "G_THAN";
+        case (GE_THAN):
+                return "GE_THAN";
+
+        case (LOGICAL_AND):
+                return "LOGICAL_AND";
+        case (LOGICAL_OR):
+                return "LOGICAL_OR";
+        case (BITWISE_AND):
+                return "BITWISE_AND";
+        case (BITWISE_OR):
+                return "BITWISE_OR";
+
         case (INTEGER_LITERAL):
                 return "INTEGER_LITERAL\0";
         case (FLOAT_LITERAL):
@@ -164,6 +190,9 @@ char *typeString(int type) {
                 return "CHARACTER_LITERAL";
         case (STRING_LITERAL):
                 return "STRING_LITERAL";
+
+        case (END_OF_LIST):
+                return "END_OF_LIST";
         }
 
         return NULL;

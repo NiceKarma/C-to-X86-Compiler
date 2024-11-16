@@ -63,7 +63,7 @@ Node *parseTerm(Token **input_token) {
         return factor;
 }
 
-Node *parseExpression(Token **input_token) {
+Node *parseAdditiveExpression(Token **input_token) {
         Token *curr_token = *input_token;
 
         Node *term = parseTerm(&curr_token);
@@ -74,6 +74,84 @@ Node *parseExpression(Token **input_token) {
                 int op = curr_token->type;
                 curr_token++;
                 Node *next_term = parseTerm(&curr_token);
+                term = newBinOp(op, term, next_term);
+                next_token = curr_token + 1;
+        }
+
+        *input_token = curr_token;
+        return term;
+}
+
+Node *parseRelationalExpression(Token **input_token) {
+        Token *curr_token = *input_token;
+
+        Node *term = parseAdditiveExpression(&curr_token);
+        Token *next_token = curr_token + 1;
+
+        while (next_token->type == L_THAN || next_token->type == LE_THAN ||
+               next_token->type == G_THAN || next_token->type == GE_THAN) {
+                curr_token++;
+                int op = curr_token->type;
+                curr_token++;
+                Node *next_term = parseAdditiveExpression(&curr_token);
+                term = newBinOp(op, term, next_term);
+                next_token = curr_token + 1;
+        }
+
+        *input_token = curr_token;
+        return term;
+}
+
+Node *parseEqualityExpression(Token **input_token) {
+        Token *curr_token = *input_token;
+
+        Node *term = parseRelationalExpression(&curr_token);
+        Token *next_token = curr_token + 1;
+
+        while (next_token->type == IS_NOT_EQUAL ||
+               next_token->type == IS_EQUAL) {
+                curr_token++;
+                int op = curr_token->type;
+                curr_token++;
+                Node *next_term = parseRelationalExpression(&curr_token);
+                term = newBinOp(op, term, next_term);
+                next_token = curr_token + 1;
+        }
+
+        *input_token = curr_token;
+        return term;
+}
+
+Node *parseLogicalAndExpression(Token **input_token) {
+        Token *curr_token = *input_token;
+
+        Node *term = parseEqualityExpression(&curr_token);
+        Token *next_token = curr_token + 1;
+
+        while (next_token->type == LOGICAL_AND) {
+                curr_token++;
+                int op = curr_token->type;
+                curr_token++;
+                Node *next_term = parseEqualityExpression(&curr_token);
+                term = newBinOp(op, term, next_term);
+                next_token = curr_token + 1;
+        }
+
+        *input_token = curr_token;
+        return term;
+}
+
+Node *parseExpression(Token **input_token) {
+        Token *curr_token = *input_token;
+
+        Node *term = parseLogicalAndExpression(&curr_token);
+        Token *next_token = curr_token + 1;
+
+        while (next_token->type == LOGICAL_OR) {
+                curr_token++;
+                int op = curr_token->type;
+                curr_token++;
+                Node *next_term = parseLogicalAndExpression(&curr_token);
                 term = newBinOp(op, term, next_term);
                 next_token = curr_token + 1;
         }

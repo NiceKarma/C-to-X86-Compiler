@@ -25,6 +25,9 @@ int main(int argc, char *argv[]) {
 
         fclose(file_to_lex);
 
+        // Print Token List
+        printTokenList(&token_list);
+
         // Parse Phase
         Node *tree = parseProgram(&token_list);
 
